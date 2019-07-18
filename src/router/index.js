@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Form from '@/components/Form'
 import Home from '@/components/Home'
 import Historial from '@/components/Historial'
+import Pruebas from '@/components/Pruebas'
 
 
 Vue.use(Router)
@@ -22,6 +23,11 @@ export default new Router({
       path: '/historial',
       name: 'Historial',
       component: Historial
+    },
+    {
+      path: '/pruebas',
+      name:'Pruebas',
+      component: Pruebas
     }
   ]
 })
