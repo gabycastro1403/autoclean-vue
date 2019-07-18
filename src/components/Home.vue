@@ -1,12 +1,12 @@
 <template>
-  <div>
-    <h1>AUTO CLEAN</h1>
-    <h2>Bienvenidos</h2>
-    <p>Tu automóvil limpio, sin salir de casa</p>
-    <a class="waves-effect waves-light btn-large light-blue darken-1" @click="login =! login">Login</a>
+  <div class="container text-light">
+    <h1 class="mt-2">Auto Clean</h1>
+    <h2 class="mt-5">Bienvenidos</h2>
+    <p>"Tu automóvil limpio, sin salir de casa"</p>
+    <a class="btn btn-outline-light btn-lg mr-2 text-dark" @click="login =! login">Login</a>
 
     <a
-      class="waves-effect waves-light btn-large light-blue darken-1"
+      class="btn btn-outline-light btn-lg text-dark"
       @click="signIn =! signIn"
     >Sign in</a>
 
@@ -35,5 +35,12 @@ export default {
 </script>
 
 <style scoped>
+h1{
+  font-size: 3.5em;
+}
+p{
+  font-size: 1.5em;
+}
+
 </style>
 

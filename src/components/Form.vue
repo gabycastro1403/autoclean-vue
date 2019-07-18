@@ -1,7 +1,8 @@
 <template>
     
-    <div class="form container mt-5">
+    <div class="form container mt-5 text-light">
  <form>
+     <label class="mb-5">Ingresa los datos de tu auto aquí</label>
     <div class="form-group">
        
         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="No. de Placa">
