@@ -1,14 +1,20 @@
 <template>
-    <div class="form">
+    
+    <div class="form container mt-5">
  <form>
     <div class="form-group">
-        <label for="formGroupExampleInput">Example label</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+       
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="No. de Placa">
     </div>
     <div class="form-group">
-        <label for="formGroupExampleInput2">Another label</label>
-        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+       
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Marca">
     </div>
+     <div class="form-group">
+      
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Color">
+    </div>
+    
 </form>
         
     </div>
@@ -44,4 +50,6 @@ li {
 a {
   color: #35495E;
 }
+
+
 </style>

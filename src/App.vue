@@ -4,7 +4,7 @@
       <span>Vue.js PWA</span>
     </header>
     <main>
-      <img src="./assets/logo.png" alt="Vue.js PWA">
+      <img class="img-thumbnail images-circle" src="./assets/carwash-vector.png" alt="Vue.js PWA">
       <router-view></router-view>
     </main>
   </div>
@@ -17,8 +17,15 @@ export default {
 </script>
 
 <style>
+.images-circle{
+    border-radius: 50%;
+    border: solid 5px #303F9F
+}
 body {
   margin: 0;
+  
+   background-image: linear-gradient(-90deg, rgba(123, 134, 221 ), rgba(86, 120, 252  ));
+  
 }
 
 #app {
