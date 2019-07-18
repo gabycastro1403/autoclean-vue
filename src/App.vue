@@ -1,10 +1,16 @@
 <template>
   <div id="app">
     <header>
-      <span>Vue.js PWA</span>
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">Autoclean</a>
+        </li>
+      </ul>
     </header>
     <main>
+
       <img class="img-thumbnail images-circle" src="./assets/carwash-vector.png" alt="Vue.js PWA">
+
       <router-view></router-view>
     </main>
   </div>
@@ -12,8 +18,8 @@
 
 <script>
 export default {
-  name: 'app'
-}
+  name: "app"
+};
 </script>
 
 <style>
@@ -29,7 +35,7 @@ body {
 }
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
@@ -44,7 +50,7 @@ header {
   margin: 0;
   height: 56px;
   padding: 0 16px 0 24px;
-  background-color: #35495E;
+  background-color: #35495e;
   color: #ffffff;
 }
 
@@ -53,7 +59,7 @@ header span {
   position: relative;
   font-size: 20px;
   line-height: 1;
-  letter-spacing: .02em;
+  letter-spacing: 0.02em;
   font-weight: 400;
   box-sizing: border-box;
   padding-top: 16px;
