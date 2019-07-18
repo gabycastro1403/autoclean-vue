@@ -17,6 +17,11 @@ export default new Router({
       path: '/form',
       name: 'Form',
       component: Form
+    },
+    {
+      path: '/historial',
+      name: 'Historial',
+      component: Historial
     }
   ]
 })
