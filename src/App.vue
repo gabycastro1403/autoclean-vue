@@ -36,7 +36,7 @@ h1{
 }
 body {
    margin: 0;
-   background-image: linear-gradient(-90deg, rgba(216, 84, 142 ), rgba(86, 120, 252  ));
+   background-image: linear-gradient(-90deg, rgba(142, 36, 170 ), rgba(86, 120, 252  ));
   
 }
 h2 {
@@ -69,7 +69,7 @@ header {
   margin: 0;
   height: 56px;
   padding: 0 16px 0 24px;
-  background-color: #35495e;
+  background-color: #7b86bd;
   color: #ffffff;
 }
 
