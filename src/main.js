@@ -5,16 +5,6 @@ import firebase from 'firebase'
 
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  template: '<App/>',
-  components: {
-    App
-  }
-})
-
 const config = {
   apiKey: "AIzaSyCtnnkI5WnROzwdlNfTpx3GZKgLfuFrnkg",
   authDomain: "autoclean-vue.firebaseapp.com",
@@ -27,3 +17,16 @@ const config = {
 
 firebase.initializeApp(config);
 export const db = firebase.firestore();
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  db,
+  template: '<App/>',
+  components: {
+    App
+  }
+})
+
+
