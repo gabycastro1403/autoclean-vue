@@ -2,23 +2,26 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Form from '@/components/Form'
 import Home from '@/components/Home'
-
+import Historial from '@/components/Historial'
 
 
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path:'/',
+  routes: [{
+      path: '/',
       name: 'Home',
       component: Home
     },
     {
-      path:'/form',
-      name:'Form',
+      path: '/form',
+      name: 'Form',
       component: Form
+    },
+    {
+      path: '/historial',
+      name: 'Historial',
+      component: Historial
     }
-   
   ]
 })
