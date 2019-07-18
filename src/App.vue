@@ -11,7 +11,7 @@
 
       <img class="img-thumbnail images-circle" src="./assets/carwash-vector.png" alt="Vue.js PWA">
 
-      <router-view></router-view>
+      <router-view class="  animated fadeIn slow "></router-view>
     </main>
   </div>
 </template>
@@ -23,15 +23,34 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Atma&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sofia&display=swap');
+
+h1{
+  font-family: 'Sofia', cursive;
+}
+
 .images-circle{
     border-radius: 50%;
     border: solid 5px #303F9F
 }
 body {
-  margin: 0;
+   margin: 0;
+   background-image: linear-gradient(-90deg, rgba(142, 36, 170 ), rgba(86, 120, 252  ));
   
-   background-image: linear-gradient(-90deg, rgba(123, 134, 221 ), rgba(86, 120, 252  ));
-  
+}
+h2 {
+    font-family: 'Atma', cursive;
+}
+p{
+    font-family: 'Atma', cursive;
+}
+label{
+  font-family: 'Atma', cursive;
+  font-size: 1.5em;
+}
+a{
+   font-family: 'Atma', cursive; 
 }
 
 #app {
@@ -54,4 +73,42 @@ header {
   color: #ffffff;
 }
 
+header span {
+  display: block;
+  position: relative;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  box-sizing: border-box;
+  padding-top: 16px;
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+.animated.slow {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
 </style>
