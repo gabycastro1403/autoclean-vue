@@ -3,12 +3,15 @@ import Router from 'vue-router'
 import Form from '@/components/Form'
 import Home from '@/components/Home'
 import Historial from '@/components/Historial'
-import Pruebas from '@/components/Pruebas'
+
 import Servicio from '@/components/Servicio'
+
+import firebase from 'firebase';
+
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [{
       path: '/',
       name: 'Home',
@@ -17,22 +20,29 @@ export default new Router({
     {
       path: '/form',
       name: 'Form',
-      component: Form
+      component: Form,
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/historial',
       name: 'Historial',
-      component: Historial
-    },
-    {
-      path: '/pruebas',
-      name:'Pruebas',
-      component: Pruebas
+      component: Historial,
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/servicio',
       name:'Servicio',
-      component: Servicio
+      component: Servicio,
+      meta: {
+        requiresAuth: true
+      }
     }
   ]
 })
+
+
+export default router;
