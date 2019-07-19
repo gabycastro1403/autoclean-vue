@@ -36,7 +36,7 @@
       />
     </div>
     <router-link to="/form">
-      <button type="submit" class="btn btn-primary" @click="createUser()">Submit</button>
+      <button type="submit" class="btn btn-primary" @click="createUser()">Registrarme</button>
     </router-link>
   </div>
 </template>
