@@ -1,5 +1,5 @@
 <template>
-  <div class="container" id="historial">
+  <div class="container text-light" id="historial">
     <h1>historial</h1>
     <div v-for="venta in historial" :key="venta.auto" id="sales" class="card" style="width: 18rem;">
       <!-- <img src="..." class="card-img-top" alt="..." /> -->

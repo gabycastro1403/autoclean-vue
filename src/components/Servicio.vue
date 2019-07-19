@@ -1,14 +1,16 @@
 <template>
-  <div class="container" id="Servicio">
-    <h1>Servicio</h1>
-    <div class="card border-primary mb-3">
-      <div class="card-header">Juan está lavando tu auto</div>
-      <div class="card-body text-primary">
-        <h5 class="card-title">Estará listo en aprox: 00:14:50</h5>
-      </div>
+  <div class="container text-light" id="Servicio">
+  
+      <div class="card text-white bg-secondary mt-3" style="max-width: 18rem;">
+  <div class="card-header">Servicio</div>
+  <div class="card-body">
+    <h5 class="card-title">Juan esta lavando tu auto</h5>
+    <p class="card-text">Estará listo en aprox: 00:14:50</p>
+  </div>
+</div>
 
     </div>
-  </div>
+ 
 </template>
 
 <script>
@@ -26,4 +28,5 @@ export default {
 </script>
 
 <style>
+
 </style>

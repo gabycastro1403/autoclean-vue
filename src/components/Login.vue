@@ -25,7 +25,7 @@
         v-model="password"
       />
     </div>
-    <router-link to="/form"><button type="submit" class="btn btn-primary" @click="loginFn()">
+    <router-link to="/form"><button type="submit" class="btn btn-primary m-5" @click="loginFn()">
      Ingresar</button></router-link> 
   </div>
 </template>

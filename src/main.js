@@ -18,7 +18,7 @@ Vue.config.productionTip = false
 /* eslint-disable no-new */
 Vue.use(VueGoogleMaps, {
   load: {
-    key: 'AIzaSyBhraXvMrtH2ASkZwHjN44KE-b7No3YHf4',
+    key: 'AIzaSyDdtx7Iy5EFgi_uqEth127RBmycCGF2eTk',
     libraries: 'places', 
     installComponents :  true 
   }

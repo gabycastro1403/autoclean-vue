@@ -1,25 +1,26 @@
 <template>
   <div id="app">
-    <header>
-      <ul class="nav">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <ul class="nav collapse navbar-collapse navbar-nav " id="navbarNav">
         <li class="nav-item">
-          <router-link class="nav-link logo-text text-light" to="/">Autoclean</router-link>
+          <router-link class="nav-link logo-text text-light" to="/"><img width="70" height="70" class="img-thumbnail images-circle" src="./assets/carwash-vector.png"></router-link>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link logo-text text-light" to="/form">Nuevo servicio</router-link>
+          <router-link class="nav-link logo-text text-light m-3" to="/form">Nuevo servicio</router-link>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link logo-text text-light" to="/historial">Mi historial</router-link>
+          <router-link class="nav-link logo-text text-light m-3" to="/historial">Mi historial</router-link>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link logo-text text-light" to="/servicio">Consultar mi pedido</router-link>
+          <router-link class="nav-link logo-text text-light m-3" to="/servicio">Consultar mi pedido</router-link>
         </li>
-        <button class="btn btn-danger btn-sm" @click="signOut()">Cerrar sesión</button>
+        <li class="nav-link logo-text text-light" @click="signOut()">Cerrar sesión</li>
       </ul>
-    </header>
+    </nav>
     <main>
-      <img class="img-thumbnail images-circle" src="./assets/carwash-vector.png" alt="Vue.js PWA" />
-
       <router-view class="animated fadeIn slow"></router-view>
     </main>
   </div>
@@ -47,9 +48,11 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css?family=Atma&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Sofia&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
 
 h1 {
-  font-family: "Sofia", cursive;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .logo-text {
@@ -65,22 +68,29 @@ body {
   margin: 0;
   background-image: linear-gradient(
     -90deg,
-    rgba(142, 36, 170),
+    rgba(26, 35, 126  ),
     rgba(86, 120, 252)
   );
 }
 h2 {
-  font-family: "Atma", cursive;
+ font-family: 'Darker Grotesque', sans-serif;
+}
+h5{
+  font-family: 'Darker Grotesque', sans-serif;
 }
 p {
-  font-family: "Atma", cursive;
+  font-family: 'Darker Grotesque', sans-serif;
 }
 label {
-  font-family: "Atma", cursive;
+  font-family: 'Darker Grotesque', sans-serif;
   font-size: 1.5em;
 }
 a {
-  font-family: "Atma", cursive;
+font-family: 'Darker Grotesque', sans-serif;
+}
+.nav-link{
+ font-family: 'Darker Grotesque', sans-serif;
+  font-size: 2vw;
 }
 
 #app {
@@ -94,7 +104,9 @@ main {
   text-align: center;
   margin-top: 40px;
 }
-
+.btn-primary{
+  background-color: #2c3e50
+}
 header {
   margin: 0;
   height: 56px;
@@ -113,6 +125,12 @@ header span {
   box-sizing: border-box;
   padding-top: 16px;
 }
+@media (max-width:500px){
+  .nav-link{
+    font-size: 5vw;
+  }
+}
+
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;

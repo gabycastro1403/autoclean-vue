@@ -38,7 +38,6 @@
           accept="image/*"
           class="form-control"
           id="formGroupExampleInput2"
-          placeholder="Imagen"
         />
       </div>
       <label>Ingresa tu ubicación</label>
@@ -55,7 +54,7 @@
         />
       </GmapMap>
     
-    <button class="btn btn-outline-light btn-lg m-4" type="submit">Enviar</button>
+    <button class="btn btn-primary btn-lg m-4" type="submit">Enviar</button>
 
     </form>
   </div>

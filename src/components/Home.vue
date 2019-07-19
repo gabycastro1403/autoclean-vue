@@ -1,12 +1,13 @@
 <template>
   <div class="container text-light">
+     <img class="img-thumbnail images-circle" src="../assets/carwash-vector.png" alt="Vue.js PWA" />
     <h1 class="mt-2">Auto Clean</h1>
     <h2 class="mt-5">Bienvenidos</h2>
     <p>"Tu automóvil limpio, sin salir de casa"</p>
-    <a class="btn btn-outline-light btn-lg mr-2 text-dark" @click="login =! login">Login</a>
+    <a class="btn btn-primary btn-lg mr-2 text-light" @click="login =! login">Login</a>
 
     <a
-      class="btn btn-outline-light btn-lg text-dark"
+      class="btn btn-primary btn-lg text-light"
       @click="signIn =! signIn"
     >Sign in</a>
 
