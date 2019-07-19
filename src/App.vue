@@ -3,7 +3,8 @@
     <header>
       <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link title-link text-light" href="#">Autoclean</a>
+          <a class="nav-link logo-text text-light" href="/">Autoclean</a>
+
         </li>
       </ul>
     </header>
@@ -29,7 +30,7 @@ h1 {
   font-family: "Sofia", cursive;
 }
 
-.title-link {
+.logo-text {
   font-family: "Sofia", cursive;
   font-size: 2em;
 }
