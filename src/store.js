@@ -42,7 +42,18 @@ const store = new Vuex.Store({
       }
     }
   },
-  getters: {}
+  getters: {
+    isAUser(state) {
+      if (state.user === null || state.user === "" || state.user === undefined) {
+        console.log("no a user");
+        return false;
+      } else {
+        console.log("there's a user");
+        router.replace("/");
+        return true;
+      }
+    }
+  }
 });
 
 export default store

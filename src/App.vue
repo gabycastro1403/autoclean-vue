@@ -3,8 +3,16 @@
     <header>
       <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link logo-text text-light" href="/">Autoclean</a>
-
+          <router-link class="nav-link logo-text text-light" to="/">Autoclean</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link logo-text text-light" to="/form">Nuevo servicio</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link logo-text text-light" to="/historial">Mi historial</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link logo-text text-light" to="/servicio">Consultar mi pedido</router-link>
         </li>
         <button class="btn btn-danger btn-sm" @click="signOut()">Cerrar sesión</button>
       </ul>
@@ -29,6 +37,9 @@ export default {
        router.replace('/');
 
     }
+  },
+  computed:{
+    
   }
 };
 </script>
