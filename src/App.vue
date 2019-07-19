@@ -3,15 +3,14 @@
     <header>
       <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link text-light" href="#">Autoclean</a>
+          <a class="nav-link title-link text-light" href="#">Autoclean</a>
         </li>
       </ul>
     </header>
     <main>
+      <img class="img-thumbnail images-circle" src="./assets/carwash-vector.png" alt="Vue.js PWA" />
 
-      <img class="img-thumbnail images-circle" src="./assets/carwash-vector.png" alt="Vue.js PWA">
-
-      <router-view class="  animated fadeIn slow "></router-view>
+      <router-view class="animated fadeIn slow"></router-view>
     </main>
   </div>
 </template>
@@ -23,34 +22,42 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Atma&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Sofia&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Atma&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Sofia&display=swap");
 
-h1{
-  font-family: 'Sofia', cursive;
+h1 {
+  font-family: "Sofia", cursive;
 }
 
-.images-circle{
-    border-radius: 50%;
-    border: solid 5px #303F9F
+.title-link {
+  font-family: "Sofia", cursive;
+  font-size: 2em;
+}
+
+.images-circle {
+  border-radius: 50%;
+  border: solid 5px #303f9f;
 }
 body {
-   margin: 0;
-   background-image: linear-gradient(-90deg, rgba(142, 36, 170 ), rgba(86, 120, 252  ));
-  
+  margin: 0;
+  background-image: linear-gradient(
+    -90deg,
+    rgba(142, 36, 170),
+    rgba(86, 120, 252)
+  );
 }
 h2 {
-    font-family: 'Atma', cursive;
+  font-family: "Atma", cursive;
 }
-p{
-    font-family: 'Atma', cursive;
+p {
+  font-family: "Atma", cursive;
 }
-label{
-  font-family: 'Atma', cursive;
+label {
+  font-family: "Atma", cursive;
   font-size: 1.5em;
 }
-a{
-   font-family: 'Atma', cursive; 
+a {
+  font-family: "Atma", cursive;
 }
 
 #app {
