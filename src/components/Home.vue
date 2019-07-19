@@ -18,6 +18,7 @@
 <script>
 import Login from "./Login";
 import SignIn from "./SignIn";
+import {mapActions} from "vuex";
 
 export default {
   name: "home",

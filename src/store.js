@@ -1,43 +1,48 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-// import firebase from 'firebase';
+import firebase from 'firebase';
 import db from "./js/firebase";
+import router from './router'
+
 
 Vue.use(Vuex)
 
-export default new Vuex.Store({
+
+const store = new Vuex.Store({
   state: {
-    historial: {
-      auto: '',
-      fecha: null,
-      geopointer: null,
-      placas: ''
+    user: {
+      userName: null,
+      carId: null,
+      carColor: null,
+      carType: null,
+      email: null,
+      uid: null,
+      displayName: null
     },
-    historialData: [],
-    hisData: {
-      idHistorial: ''
-    }
+    error: null
   },
   mutations: {
-    setHistorialData(state, historialData) {
-      state.historialData = historialData
+    setUser(state, payload) {
+      state.user = payload;
     }
   },
   action: {
-    getPosts({
+    observer({
       commit
-    }) {
-      const posts = [];
-      db.collection("historial").get()
-        .then(querySnapshot => {
-          querySnapshot.forEach(doc => {
-            let historialData = doc.data();
-            // historialData.idHistorial = doc.id;
-            historialData.push(post);
-          });
+    }, payload) {
+      if (payload != null) {
+        commit('setUser', {
+          email: payload.email,
+          uid: payload.uid,
+
+          displayName: payload.displayName
         })
-      commit('setPosts', posts);
-    },
+      } else {
+        commit('setUser', null)
+      }
+    }
   },
   getters: {}
 });
+
+export default store

@@ -6,6 +6,7 @@
           <a class="nav-link logo-text text-light" href="/">Autoclean</a>
 
         </li>
+        <button class="btn btn-danger" @click="signOut()">Cerrar sesión</button>
       </ul>
     </header>
     <main>
@@ -17,8 +18,18 @@
 </template>
 
 <script>
+import firebase from "firebase";
+import router from "./router/index"
+
 export default {
-  name: "app"
+  name: "app",
+  methods:{
+    signOut(){
+      firebase.auth().signOut();
+       router.replace('/');
+
+    }
+  }
 };
 </script>
 
