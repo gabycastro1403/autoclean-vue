@@ -1,4 +1,5 @@
 import firebase from 'firebase'
+require ("firebase/firestore")
 import store from '@/store'
 import router from '../router';
 
@@ -56,9 +57,9 @@ firebase.auth().onAuthStateChanged((user) => {
 })
 
 
-const db = firebase.firestore(fb);
+const db = firebase.firestore();
 
-export default {
+export  {
   db
   //   googleAuth
 }

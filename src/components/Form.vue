@@ -62,6 +62,8 @@
 </template>
 
 <script>
+  import {db} from '../js/firebase.js'
+
 export default {
   name: "form",
   mounted(){
@@ -70,22 +72,32 @@ export default {
   data() {
     return {
       uploadReady:true,
-
-      newService: {
+       newService: {
         numPlaca: "",
         marca: "",
         color: "",
         imagen: ""
-      }
+       }
+      
     };
   },
   methods: {
     serviceSave() {
+
+      db.collection("services").add(this.newService)
+      .then((docRef)=> {
+       console.log("Document written with ID: ", docRef.id);
+    })
+      .catch(function(error) {
+        console.error("Error adding document: ", error);
+    }),
+
+      
+    
       this.uploadReady=false
       this.$nextTick( ()=>{
         this.uploadReady=true;
       })
-      console.log(this.newService);
       this.newService={
         numPlaca: "",
         marca: "",

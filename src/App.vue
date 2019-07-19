@@ -6,7 +6,7 @@
           <a class="nav-link logo-text text-light" href="/">Autoclean</a>
 
         </li>
-        <button class="btn btn-danger" @click="signOut()">Cerrar sesión</button>
+        <button class="btn btn-danger btn-sm" @click="signOut()">Cerrar sesión</button>
       </ul>
     </header>
     <main>
