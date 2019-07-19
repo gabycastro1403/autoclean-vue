@@ -3,15 +3,33 @@
 <h1>
     pruebas funcionando
 </h1>
-<button class="btn btn-outline-light btn-lg text-dark" @click="localizacion">localizacion</button>
+<GmapMap class="container mt-5"
+  v-bind:center = " {lat : 19.4292730   , lng :  -99.1806473 } " 
+  v-bind:zoom = " 16 "
+   style = " width: 80%; height: 300px "
+>
+<GmapMarker
+   v-bind:position=" {lat : 19.4292730  , lng : -99.1806473 } " 
+   v-bind:clickable="true"
+   v-bind:draggable="true"
+    @click="center=m.position"
+  />
+</GmapMap>
+
 </div>
 
 
 </template>
 
 <script>
+  
+    export default {
+        name:"pruebas",
+         
+  mounted(){
+      this.localizacion()
+  },
 
-    export default{
         methods: {
             localizacion(){
                 if(navigator.geolocation){
@@ -23,14 +41,15 @@
 
             
          
-               
+        }  
             
         }
 
-    }
+    
 
 </script>
 
 <style>
+
 
 </style>

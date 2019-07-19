@@ -6,6 +6,7 @@
       <div class="card-body text-primary">
         <h5 class="card-title">Estará listo en aprox: 00:14:50</h5>
       </div>
+
     </div>
   </div>
 </template>
