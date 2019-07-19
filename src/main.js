@@ -5,6 +5,15 @@ import * as VueGoogleMaps from 'vue2-google-maps'
 
 Vue.config.productionTip = false;
 
+import Vuex from 'vuex';
+import Store from './store'
+// import firebase from 'firebase'
+
+Vue.use(Vuex)
+
+Vue.config.productionTip = false
+
+
 /* eslint-disable no-new */
 Vue.use(VueGoogleMaps, {
   load: {
@@ -17,12 +26,12 @@ Vue.use(VueGoogleMaps, {
 new Vue({
   el: '#app',
   router,
+  Store,
   template: '<App/>',
   components: {
     App
   }
 });
+})
 
-
-
-
+// Store.dispatch('getPost')
