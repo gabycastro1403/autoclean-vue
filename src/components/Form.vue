@@ -42,12 +42,12 @@
       </div>
       <label>Ingresa tu ubicación</label>
       <GmapMap class="container mt-5"
-        v-bind:center =  "{lat : 19.4292730   , lng :  -99.1806473 } "
+        v-bind:center =  "{lat : this.latUser   , lng :  this.lngUser } "
         v-bind:zoom = " 18 "
         style = " width: 80%; height: 300px "
       >
       <GmapMarker
-        v-bind:position=" {lat : 19.4292730  , lng : -99.1806473 } " 
+        v-bind:position=" {lat : this.latUser  , lng : this.lngUser } " 
         v-bind:clickable="true"
         v-bind:draggable="true"
         
@@ -70,13 +70,16 @@ export default {
   },
   data() {
     return {
+      latUser:0,
+       lngUser:0,
       uploadReady:true,
        newService: {
         numPlaca: "",
         marca: "",
         color: "",
         imagen: ""
-       }
+       },
+       
       
     };
   },
@@ -117,6 +120,8 @@ export default {
      if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition( (position)=>{
            console.log( position.coords.latitude, position.coords.longitude);
+           this.latUser= position.coords.latitude;
+           this.lngUser= position.coords.longitude;
        })
       }
     }
