@@ -4,7 +4,7 @@ import Form from '@/components/Form'
 import Home from '@/components/Home'
 import Historial from '@/components/Historial'
 import Pruebas from '@/components/Pruebas'
-
+import Servicio from '@/components/Servicio'
 
 Vue.use(Router)
 
@@ -28,6 +28,11 @@ export default new Router({
       path: '/pruebas',
       name:'Pruebas',
       component: Pruebas
+    },
+    {
+      path: '/servicio',
+      name:'Servicio',
+      component: Servicio
     }
   ]
 })
